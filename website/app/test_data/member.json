@@ -1,0 +1,39 @@
+{
+    "member": {
+        "name": "Yuchen Liu :)",
+        "age": 26,
+        "id_number": "N124885927",
+        "token": "YH($KGUTN48DJ",
+        "create_time": "2016/03/25 00:10:20"
+    },
+    "alerts": [{
+        "event": "Morning Call",
+        "level": 1,
+        "disabled": false
+    }, {
+        "event": "Work on",
+        "level": 2,
+        "disabled": false
+    }, {
+        "event": "Work off",
+        "level": 3,
+        "disabled": false
+    }, {
+        "event": "Get up",
+        "level": 4,
+        "disabled": false
+    }, {
+        "event": "Sleep",
+        "level": 5,
+        "disabled": false
+    }],
+    "messages": [{
+        "sender": "Shyshyhao",
+        "send_time": "2016/03/25 10:10:20",
+        "message": "Hello, yuchen Nice to meet you."
+    }, {
+        "sender": "Adela Lin",
+        "send_time": "2016/03/25 07:10:20",
+        "message": "Get up!! Now is your time."
+    }]
+}
