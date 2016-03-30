@@ -1,4 +1,4 @@
-System.register(['angular2/core', './services/MemberServices'], function(exports_1, context_1) {
+System.register(['angular2/core', './services/MemberServices', './services/Filters'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './services/MemberServices'], function(exports
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, MemberServices_1;
+    var core_1, MemberServices_1, Filters_1;
     var MemberComponent;
     return {
         setters:[
@@ -19,20 +19,30 @@ System.register(['angular2/core', './services/MemberServices'], function(exports
             },
             function (MemberServices_1_1) {
                 MemberServices_1 = MemberServices_1_1;
+            },
+            function (Filters_1_1) {
+                Filters_1 = Filters_1_1;
             }],
         execute: function() {
             MemberComponent = (function () {
                 function MemberComponent(memberService) {
+                    var _this = this;
+                    this._memberService = memberService;
+                    this._memberService.getMemberInfomation().subscribe(function (res) {
+                        _this.member = res.member;
+                        _this.alerts = res.alerts;
+                        _this.messages = res.messages;
+                    });
+                    this.member = memberService.member;
                     this.alerts = memberService.alerts;
                     this.messages = memberService.messages;
-                    this.member = memberService.member;
                 }
                 MemberComponent = __decorate([
                     core_1.Component({
                         selector: 'member-app',
-                        //templateUrl: '../templates/member.html',
-                        template: '<p>test</p>',
-                        providers: [MemberServices_1.MemberService]
+                        templateUrl: '../templates/member.html',
+                        providers: [MemberServices_1.MemberService],
+                        pipes: [Filters_1.FilterDisalbedPipe]
                     }), 
                     __metadata('design:paramtypes', [MemberServices_1.MemberService])
                 ], MemberComponent);

@@ -1,0 +1,10 @@
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+        <li >
+            <button type="button" class="btn btn-default navbar-btn	">快速新增</button>
+        </li>
+        <li *ngFor="#menu of (menus | filterDisalbed);#i = index;">
+            <a href="menu.link"><i class="fa fa-fw {{menu.icon}}"></i> {{menu.name}}</a>
+        </li>
+    </ul>
+</div>

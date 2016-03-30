@@ -1,0 +1,27 @@
+{
+    "menus": [{
+
+        "name": "我的文章",
+        "icon": "fa-dashboard",
+        "link": "blogs",
+        "disabled": false
+    }, {
+
+        "name": "相簿",
+        "icon": "fa-bar-chart-o",
+        "link": "albums",
+        "disabled": false
+    }, {
+
+        "name": "簡介",
+        "icon": "fa-table",
+        "link": "introduction",
+        "disabled": false
+    }, {
+
+        "name": "未完待續",
+        "icon": "fa-edit",
+        "link": "tobecontinue",
+        "disabled": false
+    }]
+}
