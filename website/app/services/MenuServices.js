@@ -11,7 +11,7 @@ System.register(['angular2/core', 'angular2/http'], function(exports_1, context_
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, http_1;
-    var MemberService;
+    var MenuService;
     return {
         setters:[
             function (core_1_1) {
@@ -21,52 +21,25 @@ System.register(['angular2/core', 'angular2/http'], function(exports_1, context_
                 http_1 = http_1_1;
             }],
         execute: function() {
-            MemberService = (function () {
-                function MemberService(http) {
-                    console.log('bootstrap memberService..');
+            MenuService = (function () {
+                function MenuService(http) {
+                    console.log('bootstrap menuService..');
                     this.http = http;
-                    this.alerts = [];
-                    this.messages = [];
-                    this.member = {};
                     //this.getMemberInfomation();
                 }
-                MemberService.prototype.getMemberInfomation = function () {
+                MenuService.prototype.getMenus = function () {
                     console.log('start loading data...');
-                    return this.http.get('./app/test_data/member.json')
+                    return this.http.get('./app/test_data/menu.json')
                         .map(function (res) { return res.json(); });
                 };
-                MemberService.prototype.alertLevel = function (level) {
-                    var result = "";
-                    switch (level) {
-                        case 1:
-                            result = "primary";
-                            break;
-                        case 2:
-                            result = "success";
-                            break;
-                        case 3:
-                            result = "info";
-                            break;
-                        case 4:
-                            result = "warning";
-                            break;
-                        case 5:
-                            result = "danger";
-                            break;
-                        default:
-                            result = "default";
-                            break;
-                    }
-                    return result;
-                };
-                MemberService = __decorate([
+                MenuService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])
-                ], MemberService);
-                return MemberService;
+                ], MenuService);
+                return MenuService;
             }());
-            exports_1("MemberService", MemberService);
+            exports_1("MenuService", MenuService);
         }
     }
 });
-//# sourceMappingURL=MemberServices.js.map
+//# sourceMappingURL=MenuServices.js.map

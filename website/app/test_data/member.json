@@ -13,7 +13,7 @@
     }, {
         "event": "Work on",
         "level": 2,
-        "disabled": false
+        "disabled": true
     }, {
         "event": "Work off",
         "level": 3,
@@ -25,7 +25,7 @@
     }, {
         "event": "Sleep",
         "level": 5,
-        "disabled": false
+        "disabled": true
     }],
     "messages": [{
         "sender": "Shyshyhao",

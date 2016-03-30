@@ -12,6 +12,7 @@
     <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.0/http.dev.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <!-- 2. Load our 'modules' -->
@@ -22,9 +23,16 @@
             app: {
                 format: 'register',
                 defaultExtension: 'js'
-            }
+            },
+            './node_modules/rxjs': { defaultExtension: 'js' }
+
+        },
+        paths: {
+            'rxjs/operator/*': './node_modules/rxjs/add/operator/*.js',
+            'rxjs/*': './node_modules/rxjs/*.js'
         }
     });
+
     System.import('app/main')
         .then(null, console.error.bind(console));
     </script>
@@ -46,25 +54,7 @@
             </div>
             <member-app>not yet login...</member-app>
             <!-- 左方欄 -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li>
-                        <button type="button" class="btn btn-default navbar-btn	">快速新增</button>
-                    </li>
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> 我的文章</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> 相簿</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> 簡介</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> 未完待續</a>
-                    </li>
-                </ul>
-            </div>
+           	<menu-app></menu-app>
         </nav>
         <div id="page-wrapper">
             <div class="container-fluid">
