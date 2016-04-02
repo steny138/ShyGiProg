@@ -1,0 +1,35 @@
+{
+  "blogs": [
+    {
+      "seq": 1,
+      "subject": "Blog No 1",
+      "content": "測試文章",
+      "comments": [
+        {
+          "name": "Steny",
+          "comment": "真是絕妙好文章",
+          "rank": 10
+        },
+        {
+          "name": "Yuchen",
+          "comment": "趕快推不然別人以為我們看不懂",
+          "rank": 10
+        }
+      ],
+      "disabled": false
+    },
+    {
+      "seq": 2,
+      "subject": "Blog No 2",
+      "content": "測試文章2",
+      "comments": [
+        {
+          "name": "Shyshyhao",
+          "comment": "亂寫一通胡言亂語",
+          "rank": 1
+        }
+      ],
+      "disabled": false
+    }
+  ]
+}
