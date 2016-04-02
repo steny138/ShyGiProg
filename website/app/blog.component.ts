@@ -9,7 +9,7 @@ import {FilterDisalbedPipe} from './services/Filters';
 	providers: [BlogService],
 	pipes: [FilterDisalbedPipe]
 })
-export class MenuComponent {
+export class BlogComponent {
 	public blogs: Array<Blog>;
 
 	private _blogService: BlogService;
